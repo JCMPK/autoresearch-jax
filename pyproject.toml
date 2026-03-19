@@ -1,0 +1,44 @@
+[project]
+name = "autoresearch-jax"
+version = "0.1.0"
+description = "Autonomous pretraining research swarm — JAX/Flax/Optax port"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "jax>=0.4.35",
+    "flax>=0.10.0",
+    "optax>=0.2.4",
+    "matplotlib>=3.10.8",
+    "numpy>=2.2.6",
+    "pandas>=2.3.3",
+    "pyarrow>=21.0.0",
+    "requests>=2.32.0",
+    "rustbpe>=0.1.0",
+    "tiktoken>=0.11.0",
+]
+
+# Platform-specific JAX installations:
+#
+#   NVIDIA CUDA 12:
+#     pip install "jax[cuda12]"
+#     or add the index below and use jax[cuda12] in dependencies
+#
+#   Apple Silicon (Metal):
+#     pip install "jax-metal"
+#
+#   CPU only:
+#     pip install "jax[cpu]"
+#
+# With uv you can override via:
+#   uv pip install "jax[cuda12]" --index https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+
+[tool.uv.sources]
+# Uncomment and adjust for CUDA 12 on Linux:
+# jax = [
+#     { index = "jax-cuda12", marker = "sys_platform == 'linux'" },
+# ]
+
+# [[tool.uv.index]]
+# name = "jax-cuda12"
+# url = "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+# explicit = true
