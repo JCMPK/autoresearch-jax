@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# uv
+.uv/
+
+# JAX / XLA cache
+/tmp/jax_cache/
+jax_cache/
+
+# Experiment artifacts (untracked by design)
+results.tsv
+run.log
+*.log
+
+# OS
+.DS_Store
