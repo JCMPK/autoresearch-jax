@@ -1,6 +1,10 @@
 # autoresearch (JAX port)
 
-JAX/Flax/Optax port of [autoresearch](https://github.com/karpathy/autoresearch).
+> **This is a JAX/Flax/Optax port of [autoresearch](https://github.com/karpathy/autoresearch) by [@karpathy](https://github.com/karpathy).**
+> The original codebase, experiment design, training loop, evaluation metric, and agent workflow are his work.
+> This port adapts the implementation to run on JAX — removing the CUDA-only Flash Attention 3 dependency
+> and enabling Apple Silicon (Metal) and CPU support.
+
 Runs on NVIDIA CUDA, Apple Silicon (Metal), and CPU — no Flash Attention kernel required.
 
 The experiment loop, metric (`val_bpb`), and agent workflow are identical to the original.
